@@ -6,5 +6,8 @@ when using the seed works a bit differently to usual. Basically there are 2 ways
 
 However remembering the seed value and expecting the node will produce the same prompt will not work as the node has its own random generator.
 
+If the seed is set to 999 (Fixed) then the main portion of the prompt is set to 0 and the prompt will only include the pre_text and post_text.
+
+
 that is all.
 
