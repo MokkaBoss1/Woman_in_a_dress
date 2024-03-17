@@ -319,12 +319,12 @@ class Woman_in_a_dress:
             random_pattern = random.randint(1,num_patterns-1)
             pattern_or_texture = dress_patterns_textures[random_pattern]
         
-    
-    
-    
-    
-    
         positive_prompt = f"{pre_text} {ethnicity} woman with {hair_colour} {hair_style}, wearing a {dress_colour} {pattern_or_texture} {dress_style}, {post_text}"
+
+        if seed == 999:
+            positive_prompt = f"{pre_text} {post_text} "
+        
+        
 
         print(positive_prompt)
 
