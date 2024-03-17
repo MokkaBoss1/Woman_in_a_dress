@@ -275,8 +275,10 @@ class Woman_in_a_dress:
     @classmethod
     def INPUT_TYPES(cls):
                
-        return {"required": {       
-                    "text": ("STRING", {"multiline": False, "default": ""}),
+        return {"required": {
+                    "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
+                    "pre_text": ("STRING", {"multiline": False, "default": ""}),
+                    "post_text": ("STRING", {"multiline": False, "default": ""}),
                     "ethnicity": ((ethnicities), ),
                     "hair_colour": ((haircolours), ),
                     "hair_style": ((hairstyles), ),
@@ -291,7 +293,7 @@ class Woman_in_a_dress:
     FUNCTION = "test3"
     CATEGORY = "MokkaBoss1"
 
-    def test3(self, text, ethnicity, hair_colour, hair_style, dress_style, dress_colour, pattern_or_texture):
+    def test3(self, seed, pre_text, post_text, ethnicity, hair_colour, hair_style, dress_style, dress_colour, pattern_or_texture):
 
         if ethnicity == "Random":
             random_ethnicity = random.randint(1, num_ethnicities-1)
@@ -322,7 +324,7 @@ class Woman_in_a_dress:
     
     
     
-        positive_prompt = f"Pretty 21 year old {ethnicity} woman with {hair_colour} {hair_style}, wearing a {dress_colour} {pattern_or_texture} {dress_style}, {text}"
+        positive_prompt = f"{pre_text} {ethnicity} woman with {hair_colour} {hair_style}, wearing a {dress_colour} {pattern_or_texture} {dress_style}, {post_text}"
 
         print(positive_prompt)
 
@@ -330,4 +332,5 @@ class Woman_in_a_dress:
 
 NODE_CLASS_MAPPINGS = {"Woman_in_a_dress": Woman_in_a_dress}
 NODE_DISPLAY_NAME_MAPPINGS = {"Woman_in_a_dress": "Woman_in_a_dress"}
+
 
