@@ -1,3 +1,5 @@
+This program is a custom node for comfyui which allows selective "randomness" in constructing a prompt about a woman in a dress
+
 put the python file into the comfyui custom nodes folder and restart comfyui to install
 
 see screenshot for workflow example
