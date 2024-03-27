@@ -54,6 +54,10 @@ ethnicities = [
     "Saudi Arabian",
     "Emirati"
 ]
+ethnicities.remove("Random")
+ethnicities.sort()
+ethnicities.insert(0, "Random")
+    
 
 haircolours = [
     "Random",
@@ -69,6 +73,12 @@ haircolours = [
     "Dark Brown",
     "Light Brown"
 ]
+
+haircolours.remove("Random")
+haircolours.sort()
+haircolours.insert(0, "Random")
+
+
 
 hairstyles = [
     "Random",
@@ -95,7 +105,11 @@ hairstyles = [
     "Feathered Layers",
     "Layered Shag"
 ]
+hairstyles.remove("Random")
+hairstyles.sort()
+hairstyles.insert(0, "Random")
 
+    
 dress_styles = [
     "Random",
     "Shift dress",
@@ -153,9 +167,15 @@ dress_styles = [
     "Bodysuit",
     "Corset and Garter Belt Set",
     "Babydoll and Chemise",
-    "Roleplay costume"
-    
+    "Roleplay costume" 
 ]
+
+dress_styles.remove("Random")
+dress_styles.sort()
+dress_styles.insert(0, "Random")
+
+
+
 
 dress_colours = [
     "Random",
@@ -212,6 +232,10 @@ dress_colours = [
     "Rosewood"
 ]
 
+dress_colours.remove("Random")
+dress_colours.sort()
+dress_colours.insert(0, "Random")
+
 dress_patterns_textures = [
     "Random",
     "Stripes",
@@ -257,6 +281,10 @@ dress_patterns_textures = [
     "Velvet",
     "Tulle"
 ]
+
+dress_patterns_textures.remove("Random")
+dress_patterns_textures.sort()
+dress_patterns_textures.insert(0, "Random")
 
 num_ethnicities = len(ethnicities)-1
 num_hairstyles = len(hairstyles)-1
